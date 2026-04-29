@@ -8,7 +8,7 @@ class PhoneBook
 		static Contact contacts[8];
 		static int		sizeContacts;
 	public:
-		static void addContact(Contact contact);
+		static void addContact(PhoneBook &book, Contact contact);
 		static void searchContact();
 };
 #endif

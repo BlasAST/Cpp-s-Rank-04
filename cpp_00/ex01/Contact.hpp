@@ -9,9 +9,9 @@ class Contact
 		std::string _firstName;
 		std::string _lastName;
 		std::string _nickName;
-		int			phoneNumber;
-		int			darkestSecret;
+		std::string	phoneNumber;
+		std::string darkestSecret;
 	public:
-		
+		static Contact	get_data_contact();
 };
 #endif
