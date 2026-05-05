@@ -9,3 +9,8 @@ void PhoneBook::addContact(PhoneBook &book, Contact contact)
 		
 	// }
 }
+
+void PhoneBook::searchContact(PhoneBook &book) const
+{
+
+}

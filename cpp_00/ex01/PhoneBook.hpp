@@ -6,9 +6,9 @@ class PhoneBook
 {
 	private:
 		static Contact contacts[8];
-		static int		sizeContacts;
+		int		sizeContacts;
 	public:
 		static void addContact(PhoneBook &book, Contact contact);
-		static void searchContact();
+		static void searchContact(PhoneBook &book) const;
 };
 #endif
