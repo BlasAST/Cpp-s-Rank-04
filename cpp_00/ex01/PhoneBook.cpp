@@ -1,7 +1,8 @@
 #include "PhoneBook.hpp"
 
-void PhoneBook::addContact(PhoneBook &book, Contact contact)
+void PhoneBook::addContact(Contact contact)
 {
+
 	// int	i = 0;
 
 	// while (i < PhoneBook::sizeContacts)
@@ -12,5 +13,8 @@ void PhoneBook::addContact(PhoneBook &book, Contact contact)
 
 void PhoneBook::searchContact(PhoneBook &book) const
 {
-
+	for (int i = 0; i < book._index; i++)
+	{
+		
+	}
 }

@@ -1,12 +1,15 @@
 #include "PhoneBook.hpp"
+#include "Utils.hpp"
+#include "Contact.hpp"
 #include <iostream>
 #include <iomanip>
 
 void	menu(PhoneBook book, std::string input)
 {
 	if (input == "ADD")
-		book.addContact(book, Contact::get_data_contact());
-	// else if (input == "SEARCH")
+		book.addContact(Contact::get_data_contact());
+	else if (input == "SEARCH")
+		ft::out_table(book, 10, 0, 0);
 }
 int	main(void)
 {

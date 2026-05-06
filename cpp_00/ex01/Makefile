@@ -5,7 +5,8 @@ CC = c++
 C_FLAGS = -std=c++98
 SRC = main.cpp \
 	PhoneBook.cpp \
-	Contact.cpp
+	Contact.cpp \
+	Utils.cpp
 
 OBJS_SRC = $(SRC:.cpp=.o)
 
