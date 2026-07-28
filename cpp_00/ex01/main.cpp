@@ -1,33 +1,26 @@
 #include "PhoneBook.hpp"
-#include "Utils.hpp"
-#include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
 
-void	menu(PhoneBook book, std::string input)
+int main(void)
 {
-	if (input == "ADD")
-		book.addContact(Contact::get_data_contact());
-	else if (input == "SEARCH")
-		ft::out_table(book, 10, 0, 0);
-}
-int	main(void)
-{
-	PhoneBook book;
+	PhoneBook phone;
+	std::string option;
 
-	std::string input;
-
-	do
+	while (option != "EXIT")
 	{
-		std::cout << "Select:\n\n";
-		std::cout << std::setw(10) << std::right << "ADD: Save a new contact" << std::endl;
-		std::cout << std::setw(10) << std::right << "SEARCH: Display a specific contact" << std::endl;
-		std::cout << std::setw(10) << std::right << "EXIT: Close program" << std::endl;
-		getline(std::cin, input);
-		if (input == "EXIT")
-			return (0);
-		else
-			menu(book, input);
-	} while (!input.empty());
-	return (0);	
+		std::cout << "Select option:\n\tADD -> New contact\n\tSEARCH -> Find user\n\tEXIT -> Exit program"
+		<< std::endl;
+		std::cin >> option;
+		if (option == "ADD")
+		{
+			phone.addContact();
+		}
+		else if (option  == "SEARCH")
+		{
+			phone.searchContact();
+		}
+		else if (option != "EXIT")
+			std::cout << "Invalid input" << std::endl;
+	}
+		std::cout << "EXIT" << std::endl;
+	return (0);
 }

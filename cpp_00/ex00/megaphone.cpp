@@ -1,24 +1,29 @@
 #include <iostream>
-#include <string>
+
 int main(int argc, char const *argv[])
 {
+	int	i;
+	int	j;
+
+	i = 1;
+	
 	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	else
 	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	for (int j = 1; j < argc; j++)
-	{
-		std::string s(argv[j]);
-		for (size_t i = 0; i < s.length(); i++)
+		while (argv[i])
 		{
-			if (isalpha(s[i]))
-				std::cout << (char) toupper(s[i]);
-			else
-				std::cout << s[i];
+			j = 0;
+			while (argv[i][j])
+			{
+				if (argv[i][j] >= 'a' || argv[i][j] <= 'z')
+					std::cout << (char)toupper(argv[i][j]);
+				else
+				std::cout << argv[i][j];
+				j++;
+			}
+			i++;
 		}
-		if (j < argc - 1)
-			std::cout << " ";
 	}
 	std::cout << std::endl;
 	return (0);

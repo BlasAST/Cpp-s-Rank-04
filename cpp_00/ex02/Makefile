@@ -1,14 +1,14 @@
-NAME = megaphone
-FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = megaphone.cpp
-
+NAME=program
+FLAGS = -Wall -Werror -Wextra -std=c++98
+SRC = Account.cpp \
+	tests.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	c++ $(FLAGS) $(OBJ) -o $(NAME)
-%.o : %.cpp
+%.o : %.c
 	c++ $(FLAGS) -c $< -o $@
 clean:
 	rm -rf $(OBJ)
